@@ -25,7 +25,6 @@ data::TitleInfo::TitleInfo(uint64_t applicationID) noexcept
                                                                                 &m_data,
                                                                                 SIZE_CTRL_DATA,
                                                                                 &controlSize));
-    std::snprintf(m_title, sizeof(m_title), "%016lX", m_applicationID);
     const bool entryError = !getError && error::libnx(nacpGetLanguageEntry(&m_data.nacp, &m_entry));
     if (isSystem || getError)
     {
@@ -48,7 +47,6 @@ data::TitleInfo::TitleInfo(uint64_t applicationID, NsApplicationControlData &con
     , m_data(controlData)
     , m_hasData(true)
 {
-    std::snprintf(m_title, sizeof(m_title), "%016lX", m_applicationID);
     const bool entryError = error::libnx(nacpGetLanguageEntry(&m_data.nacp, &m_entry));
     if (entryError)
     {

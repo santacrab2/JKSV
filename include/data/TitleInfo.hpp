@@ -113,9 +113,6 @@ namespace data
             /// @brief This is the path safe version of the title.
             char m_pathSafeTitle[TitleInfo::SIZE_PATH_SAFE]{};
 
-            /// @brief This is the title formatted as hex application ID.
-            mutable char m_title[17]{};  // "0123456789ABCDEF\0"
-
             /// @brief Shared icon texture.
             sdl::SharedTexture m_icon{};
 
