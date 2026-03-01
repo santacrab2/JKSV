@@ -69,9 +69,13 @@ bool data::TitleInfo::has_control_data() const noexcept { return m_hasData; }
 
 const char *data::TitleInfo::get_title() const noexcept
 {
-    if (m_applicationID == 0x0100554023408000 || m_applicationID == 0x010034D02340E000)
+    if (m_applicationID == 0x0100554023408000)
     {
-        return m_title;
+        return "Pokemon FireRed";
+    }
+    if (m_applicationID == 0x010034D02340E000)
+    {
+        return "Pokemon LeafGreen";
     }
     return m_entry->name;
 }
