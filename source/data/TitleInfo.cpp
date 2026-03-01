@@ -69,11 +69,11 @@ bool data::TitleInfo::has_control_data() const noexcept { return m_hasData; }
 
 const char *data::TitleInfo::get_title() const noexcept
 {
-    if (m_applicationID == 0x0100554023408000 || m_applicationID == 0x0100EB702342C000 || m_applicationID ==  0x01004B3023412000)
+    if (m_applicationID == 0x0100554023408000 || m_applicationID == 0x0100EB702342C000 || m_applicationID ==  0x01004B3023412000 || m_applicationID == 0x01007F8023416000 || m_applicationID == 0x010092302342A000)
     {
         return "Pokemon FireRed";
     }
-    if (m_applicationID == 0x010034D02340E000 || m_applicationID == 0x01002B5023434000 || m_applicationID == 0x010087C02342E000)
+    if (m_applicationID == 0x010034D02340E000 || m_applicationID == 0x01002B5023434000 || m_applicationID == 0x010087C02342E000 || m_applicationID == 0x0100FD6023430000 || m_applicationID == 0x01005C7023432000)
     {
         return "Pokemon LeafGreen";
     }
