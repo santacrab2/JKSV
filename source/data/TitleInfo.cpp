@@ -69,7 +69,11 @@ bool data::TitleInfo::has_control_data() const noexcept { return m_hasData; }
 
 const char *data::TitleInfo::get_title() const noexcept
 {
-    return m_applicationID == 0x0100554023408000 ? m_title : m_entry->name;
+    if (m_applicationID == 0x0100554023408000 || m_applicationID == 0x010034D02340E000)
+    {
+        return m_title;
+    }
+    return m_entry->name;
 }
 
 const char *data::TitleInfo::get_path_safe_title() const noexcept { return m_pathSafeTitle; }
